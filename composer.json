@@ -10,12 +10,10 @@
         }
     ],
     "minimum-stability": "stable",
-    "repositories": [
-        {"type": "vcs", "url": "../spas-parser"}
-    ],
     "require": {
         "php": ">=5.6",
-        "hmaus/spas-parser": "dev-master"
+        "hmaus/spas-parser": "^0.1.0",
+        "hmaus/reynaldo": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
