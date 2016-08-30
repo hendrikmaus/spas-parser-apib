@@ -1,0 +1,25 @@
+{
+    "name": "hmaus/spas-parser-apib",
+    "description": "Use API Blueprint with Spas HTTP testing tool",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hendrik Maus",
+            "email": "aidentailor@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "repositories": [
+        {"type": "vcs", "url": "../spas-parser"}
+    ],
+    "require": {
+        "php": ">=5.6",
+        "hmaus/spas-parser": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hmaus\\Spas\\Parser\\Apib\\": "src"
+        }
+    }
+}
