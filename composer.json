@@ -9,9 +9,6 @@
             "email": "aidentailor@gmail.com"
         }
     ],
-    "repositories": [
-        {"type": "vcs", "url": "../reynaldo"}
-    ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.6",
