@@ -9,15 +9,27 @@
             "email": "aidentailor@gmail.com"
         }
     ],
+    "repositories": [
+        {"type": "vcs", "url": "../reynaldo"}
+    ],
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.6",
         "hmaus/spas-parser": "^0.1.0",
-        "hmaus/reynaldo": "^0.1.0"
+        "hmaus/reynaldo": "^0.1.1"
     },
     "autoload": {
         "psr-4": {
             "Hmaus\\Spas\\Parser\\Apib\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hmaus\\Spas\\Parser\\Apib\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.5",
+        "symfony/var-dumper": "^3.1"
     }
 }
