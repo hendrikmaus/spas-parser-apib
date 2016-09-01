@@ -1,6 +1,6 @@
 {
     "name": "hmaus/spas-parser-apib",
-    "description": "Use API Blueprint with Spas HTTP testing tool",
+    "description": "Use API Blueprint Refract Parse Result with Spas HTTP testing tool",
     "type": "library",
     "license": "MIT",
     "authors": [
