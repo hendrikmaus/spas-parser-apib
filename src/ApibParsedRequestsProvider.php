@@ -109,7 +109,7 @@ class ApibParsedRequestsProvider implements Parser
             $hrefVarsForParamBag = [];
 
             foreach ($hrefVars as $hrefVarValueObject) {
-                if (!$hrefVarValueObject->default && !$hrefVarValueObject->example) {
+                if ($hrefVarValueObject->default === null && $hrefVarValueObject->example === null) {
                     if ($hrefVarValueObject->dataType === 'string') {
                         $hrefVarValueObject->example = uniqid();
                     } elseif ($hrefVarValueObject->dataType === 'number') {
