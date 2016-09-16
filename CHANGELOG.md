@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The change log itself is written the way that [keepachangelog.com](http://keepachangelog.com/) describes.
 
-## [0.1.1] - 2016-02-09
+## [0.1.2] - 2016-09-16
+### Fixed
+- Check explicitly for `null` when parsing href variables
+
+## [0.1.1] - 2016-09-02
 ### Changed
 - Added a test to cover the basic functionality of the parser
 
