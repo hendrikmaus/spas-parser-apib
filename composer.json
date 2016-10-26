@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.6",
-        "hmaus/spas-parser": "^0.1.0",
+        "hmaus/spas-parser": "^1.0.0",
         "hmaus/reynaldo": "^0.1.1"
     },
     "autoload": {
