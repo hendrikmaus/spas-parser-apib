@@ -2,7 +2,7 @@
 
 namespace Hmaus\Spas\Parser\Apib\Tests;
 
-use Hmaus\Spas\Parser\Apib\Apib;
+use Hmaus\Spas\Parser\Apib;
 use Hmaus\SpasParser\SpasResponse;
 use Symfony\Component\HttpFoundation\HeaderBag;
 use Symfony\Component\HttpFoundation\ParameterBag;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hmaus\Spas\Parser\Apib;
+namespace Hmaus\Spas\Parser;
 
 use Hmaus\Reynaldo\Elements\ApiHttpTransaction;
 use Hmaus\Reynaldo\Elements\ApiParseResult;
