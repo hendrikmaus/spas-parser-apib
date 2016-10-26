@@ -2,12 +2,12 @@
 
 namespace Hmaus\Spas\Parser\Apib\Tests;
 
-use Hmaus\Spas\Parser\Apib\ApibParsedRequestsProvider;
-use Hmaus\SpasParser\SpasResponse;
+use Hmaus\Spas\Parser\Apib;
+use Hmaus\Spas\Parser\SpasResponse;
 use Symfony\Component\HttpFoundation\HeaderBag;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
-class ApibParsedRequestsProviderTest extends \PHPUnit_Framework_TestCase
+class ApibTest extends \PHPUnit_Framework_TestCase
 {
     public function testProvider()
     {
@@ -15,7 +15,7 @@ class ApibParsedRequestsProviderTest extends \PHPUnit_Framework_TestCase
             file_get_contents(__DIR__ . '/fixtures/09. Advanced Attributes.md.refract.json'), true
         );
 
-        $provider = new ApibParsedRequestsProvider();
+        $provider = new Apib();
         $parsedRequests = $provider->parse($fixture);
 
         $this->assertCount(3, $parsedRequests);

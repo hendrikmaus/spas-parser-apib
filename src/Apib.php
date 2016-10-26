@@ -1,6 +1,6 @@
 <?php
 
-namespace Hmaus\Spas\Parser\Apib;
+namespace Hmaus\Spas\Parser;
 
 use Hmaus\Reynaldo\Elements\ApiHttpTransaction;
 use Hmaus\Reynaldo\Elements\ApiParseResult;
@@ -8,12 +8,12 @@ use Hmaus\Reynaldo\Elements\ApiResource;
 use Hmaus\Reynaldo\Elements\ApiResourceGroup;
 use Hmaus\Reynaldo\Elements\ApiStateTransition;
 use Hmaus\Reynaldo\Parser\RefractParser;
-use Hmaus\SpasParser\ParsedRequest;
-use Hmaus\SpasParser\Parser;
-use Hmaus\SpasParser\SpasRequest;
-use Hmaus\SpasParser\SpasResponse;
+use Hmaus\Spas\Parser\ParsedRequest;
+use Hmaus\Spas\Parser\Parser;
+use Hmaus\Spas\Parser\SpasRequest;
+use Hmaus\Spas\Parser\SpasResponse;
 
-class ApibParsedRequestsProvider implements Parser
+class Apib implements Parser
 {
     /**
      * @var RefractParser

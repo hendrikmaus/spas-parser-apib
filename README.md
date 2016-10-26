@@ -13,7 +13,7 @@ Using this package, `hmaus/spas-parser-apib`, you get the chance to use API Blue
 for your tests.
 
 ## Installation
-The recommended way to install, is using composer:
+The recommended way to install, is using [composer](https://getcomposer.org):
 
 ```bash
 composer require hmaus/spas-parser-apib
@@ -23,5 +23,5 @@ composer require hmaus/spas-parser-apib
 Pass it to spas as CLI option:
 
 ```bash
---request_provider "\Hmaus\Spas\Parser\Apib\ApibParsedRequestsProvider"
+--request_parser "\Hmaus\Spas\Parser\Apib"
 ```
