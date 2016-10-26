@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hmaus\\Spas\\Parser\\Apib\\": "src"
+            "Hmaus\\Spas\\Parser\\": "src"
         }
     },
     "autoload-dev": {

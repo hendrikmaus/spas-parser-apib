@@ -13,7 +13,7 @@ use Hmaus\SpasParser\Parser;
 use Hmaus\SpasParser\SpasRequest;
 use Hmaus\SpasParser\SpasResponse;
 
-class ApibParsedRequestsProvider implements Parser
+class Apib implements Parser
 {
     /**
      * @var RefractParser

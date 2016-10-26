@@ -23,5 +23,5 @@ composer require hmaus/spas-parser-apib
 Pass it to spas as CLI option:
 
 ```bash
---request_provider "\Hmaus\Spas\Parser\Apib\ApibParsedRequestsProvider"
+--request_parser "\Hmaus\Spas\Parser\Apib"
 ```
