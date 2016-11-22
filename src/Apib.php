@@ -8,10 +8,6 @@ use Hmaus\Reynaldo\Elements\ApiResource;
 use Hmaus\Reynaldo\Elements\ApiResourceGroup;
 use Hmaus\Reynaldo\Elements\ApiStateTransition;
 use Hmaus\Reynaldo\Parser\RefractParser;
-use Hmaus\Spas\Parser\ParsedRequest;
-use Hmaus\Spas\Parser\Parser;
-use Hmaus\Spas\Parser\SpasRequest;
-use Hmaus\Spas\Parser\SpasResponse;
 
 class Apib implements Parser
 {
@@ -109,14 +105,10 @@ class Apib implements Parser
             $hrefVarsForParamBag = [];
 
             foreach ($hrefVars as $hrefVarValueObject) {
-                if ($hrefVarValueObject->default === null && $hrefVarValueObject->example === null) {
-                    if ($hrefVarValueObject->dataType === 'string') {
-                        $hrefVarValueObject->example = uniqid();
-                    } elseif ($hrefVarValueObject->dataType === 'number') {
-                        $hrefVarValueObject->example = rand(0, 1000);
-                    } else {
-                        $hrefVarValueObject->example = 'missing-example-value';
-                    }
+                // Skip optional params that do not provide a default value
+                // Using an example value can lead to undesired results
+                if ($hrefVarValueObject->required === 'optional' && $hrefVarValueObject->default === null) {
+                    continue;
                 }
 
                 $hrefVarsForParamBag[$hrefVarValueObject->name] =

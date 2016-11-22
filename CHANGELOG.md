@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The change log itself is written the way that [keepachangelog.com](http://keepachangelog.com/) describes.
 
+## [1.0.1] - 2016-11-22
+### Changed
+- Ignore optional params without a default value
+
 ## [1.0.0] - 2016-10-26
 ### Changed
 - Renamed the main parser class to simply `Apib`
