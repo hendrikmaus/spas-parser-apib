@@ -77,8 +77,9 @@ class Apib implements Parser
         $apiResponse = $apiHttpTransaction->getHttpResponse();
         $req = new SpasRequest();
 
+        $req->setResourceGroup($apiResourceGroup);
+
         if ($apiResourceGroup->getTitle()) {
-            $req->setResourceGroup($apiResourceGroup->getTitle());
             $req->appendToName($apiResourceGroup->getTitle());
         }
 
