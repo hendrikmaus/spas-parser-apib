@@ -7,6 +7,7 @@ The change log itself is written the way that [keepachangelog.com](http://keepac
 ## [2.0.0] - 2016-11-30
 ### Changed
 - type hints, so php 7 is now a requirement
+- set uri template instead of href on requests
 
 ## [1.1.0] - 2016-11-30
 ### Added
