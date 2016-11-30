@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 The change log itself is written the way that [keepachangelog.com](http://keepachangelog.com/) describes.
 
+## [1.1.0] - 2016-11-30
+### Added
+- Add resource group onto every request
+
 ## [1.0.1] - 2016-11-22
 ### Changed
 - Ignore optional params without a default value
