@@ -21,7 +21,7 @@ class Apib implements Parser
         $this->parser = new RefractParser();
     }
 
-    public function parse(array $description)
+    public function parse(array $description) : array
     {
         return $this->buildParsedRequests(
             $this->parser->parse($description)
@@ -34,7 +34,7 @@ class Apib implements Parser
      * @param ApiParseResult $parseResult
      * @return ParsedRequest[]
      */
-    private function buildParsedRequests(ApiParseResult $parseResult)
+    private function buildParsedRequests(ApiParseResult $parseResult) : array
     {
         $requests = [];
 
@@ -71,7 +71,7 @@ class Apib implements Parser
         ApiResource $apiResource,
         ApiStateTransition $apiStateTransition,
         array &$requests
-    )
+    ) : array
     {
         $apiRequest = $apiHttpTransaction->getHttpRequest();
         $apiResponse = $apiHttpTransaction->getHttpResponse();
@@ -122,7 +122,7 @@ class Apib implements Parser
             $req->params->add($hrefVarsForParamBag);
         }
 
-        $req->setHref($apiResource->getHref());
+        $req->setUriTemplate($apiResource->getHref());
 
         $req->headers->add($apiRequest->getHeaders());
         $req->setMethod($apiRequest->getMethod());
@@ -144,7 +144,7 @@ class Apib implements Parser
             $response->setSchema($apiResponse->getMessageBodySchemaAsset()->getBody());
         }
 
-        $req->setResponse($response);
+        $req->setExpectedResponse($response);
         $requests[] = $req;
 
         return $requests;
