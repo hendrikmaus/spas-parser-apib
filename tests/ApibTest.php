@@ -27,7 +27,8 @@ class ApibTest extends \PHPUnit_Framework_TestCase
             $this->assertInstanceOf(HeaderBag::class, $request->getHeaders());
             $this->assertNotEmpty($request->getName());
             $this->assertEmpty($request->getBaseUrl());
-            $this->assertNotEmpty($request->getHref());
+            $this->assertEmpty($request->getHref());
+            $this->assertNotEmpty($request->getUriTemplate());
             $this->assertInternalType('string', $request->getContent());
             $this->assertNotEmpty($request->getMethod());
             $this->assertTrue($request->isEnabled());
